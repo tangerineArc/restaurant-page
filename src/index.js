@@ -3,12 +3,13 @@
 import "./style.css";
 
 import createHomeDOM from "./components/home.js";
+import createAboutDOM from "./components/about.js";
 
 const contentContainer = document.querySelector("#content");
 const navButtons = document.querySelectorAll("nav button");
 const [homeButton, menuButton, aboutButton] = navButtons;
 
-// createHomeDOM(contentContainer);
+createHomeDOM(contentContainer);
 
 navButtons.forEach(button => {
     button.addEventListener("click", event => {
@@ -31,6 +32,7 @@ function changeContent(label) {
         case "menu":
             break;
         case "about":
+            createAboutDOM(contentContainer);
             break;
     }
 }

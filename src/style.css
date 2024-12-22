@@ -170,14 +170,14 @@ blockquote {
     align-self: flex-end;
 }
 
-
-
-#quote-icon {
+.quote > div {
     position: absolute;
     top: 0;
     left: 10%;
     z-index: -1;
+}
 
+#quote-icon {
     width: 10rem;
     height: 10rem;
     stroke: grey;
