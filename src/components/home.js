@@ -1,3 +1,5 @@
+"use strict";
+
 import portMafiaCharacters from "../images/port-mafia-characters.png";
 
 const heading = document.createElement("h1");

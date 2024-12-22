@@ -9,7 +9,7 @@ const contentContainer = document.querySelector("#content");
 const navButtons = document.querySelectorAll("nav button");
 const [homeButton, menuButton, aboutButton] = navButtons;
 
-createHomeDOM(contentContainer);
+// createHomeDOM(contentContainer);
 
 navButtons.forEach(button => {
     button.addEventListener("click", event => {

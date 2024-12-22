@@ -1,3 +1,5 @@
+"use strict";
+
 import adaCharacters from "../images/ada-characters.png";
 
 const quotes = [
