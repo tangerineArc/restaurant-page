@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
 *,
 *::before,
 *::after {
@@ -6,3 +9,140 @@
     margin: 0;
 }
 
+:root {
+    --primary-text-color: #ffffff;
+
+    --primary-background-color: #252525;
+    --secondary-background-color: #2b2b2b;
+    
+    --button-background-color: #333333;
+    --button-hover-color: #3d3d3d;
+    
+    --accent-color: #ffba08;
+}
+
+body {
+    background-color: var(--primary-background-color);
+    padding-bottom: 2rem;
+
+    color: var(--primary-text-color);
+    font-family: "Roboto Mono", serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 2rem;
+    column-gap: 0.5rem;
+
+    padding: 2rem 3rem;
+
+    color: var(--accent-color);
+}
+
+nav > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav > div:last-child {
+    background-color: var(--secondary-background-color);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+nav > div > p {
+    font-size: 1.6rem;
+    font-family: "Monoton", serif;
+
+    border-bottom: 2px solid var(--accent-color);
+}
+
+#site-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    stroke: var(--accent-color);
+}
+
+nav button {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+
+    background-color: var(--button-background-color);
+    padding: 0.6rem 1.6rem;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+nav button:hover:not(.selected-tab) {
+    background-color: var(--button-hover-color);
+}
+
+.selected-tab {
+    border-bottom: 3px inset var(--accent-color);
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    align-self: center;
+
+    padding: 0 2rem;
+}
+
+#content > h1 {
+    text-align: center;
+    font-family: "Monoton", serif;
+    font-size: 4rem;
+    color: var(--accent-color);
+}
+
+.content-description {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.content-description > p:first-child {
+    font-size: 1.6rem;
+
+    border-top: 5px solid var(--accent-color);
+    border-bottom: 5px solid var(--accent-color);
+    padding: 1rem;
+}
+
+.content-description > p:last-child {
+    text-align: center;
+    line-height: 2;
+    font-size: 1.2rem;
+
+    max-width: 70ch;
+}
+
+.image-container {
+    text-align: center;
+
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.image-container > img {
+    width: clamp(100px, 80vw,700px);
+}
