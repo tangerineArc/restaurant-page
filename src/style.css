@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 *,
 *::before,
@@ -97,11 +98,12 @@ nav button:hover:not(.selected-tab) {
 #content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
 
     align-self: center;
 
-    padding: 0 2rem;
+    padding: 0 2rem 2rem;
 }
 
 #content > h1 {
@@ -139,10 +141,58 @@ nav button:hover:not(.selected-tab) {
 
 .image-container {
     text-align: center;
-
-    border-bottom: 5px solid var(--accent-color);
 }
 
 .image-container > img {
     width: clamp(100px, 80vw,700px);
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    position: relative;
+
+    padding: 2rem 1rem;
+    max-width: 100ch;
+}
+
+blockquote {
+    font-family: "Lobster", serif;
+    font-size: 3rem;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.quote > p {
+    align-self: flex-end;
+}
+
+
+
+#quote-icon {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    z-index: -1;
+
+    width: 10rem;
+    height: 10rem;
+    stroke: grey;
+    opacity: 0.3;
+}
+
+.quote span,
+.about-description span {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.about-description {
+    max-width: 70ch;
+    
+    line-height: 1.8;
+    font-size: 1.2rem;
 }
